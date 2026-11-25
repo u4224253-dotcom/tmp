@@ -59,10 +59,6 @@ jobs:
         working-directory: ${{ env.PROJECT_DIR }}
         run: chmod +x gradlew
 
-      - name: Build library (backdrop) for Android
-        working-directory: ${{ env.PROJECT_DIR }}
-        run: ./gradlew :backdrop:assemble --stacktrace
-
       - name: Build debug APK
         working-directory: ${{ env.PROJECT_DIR }}
         run: ./gradlew :androidApp:assembleDebug --stacktrace
